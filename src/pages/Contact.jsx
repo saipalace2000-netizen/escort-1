@@ -1,84 +1,78 @@
-import { useState } from "react";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    message: "",
-  });
+  const phoneNumber = "917977209085";
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const text = `Name: ${formData.name}
-Phone: ${formData.phone}
-Message: ${formData.message}`;
-
-    // ✅ VERIFIED WhatsApp Business number
-    window.open(
-      `https://wa.me/917977209085?text=${encodeURIComponent(text)}`,
-      "_blank"
-    );
-
-    // Optional: reset form
-    setFormData({
-      name: "",
-      phone: "",
-      message: "",
-    });
-  };
+  const defaultMessage =
+    "Hi, I’d like to know more about your services @ Elite Event Service";
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4">
-      <div className="bg-[#111] p-8 rounded-xl w-full max-w-md shadow-xl">
-        <h2 className="text-2xl text-gold text-center mb-6">
-          Contact Us
+      <div className="w-full max-w-3xl text-center">
+
+        {/* Heading */}
+        <h2 className="text-3xl text-gold mb-6 font-heading tracking-wide">
+          Contact Elite Event Service
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-3 rounded bg-black text-white"
-            required
-          />
+        <p className="max-w-xl mx-auto opacity-80 mb-10 leading-relaxed">
+          Private, discreet assistance available across India.
+          All engagements are handled strictly by appointment only.
+        </p>
 
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone / WhatsApp"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full p-3 rounded bg-black text-white"
-            required
-          />
+        {/* Contact Card */}
+        <div className="bg-[#111] rounded-2xl p-8
+                        border border-gold/20 shadow-xl
+                        hover:shadow-2xl transition">
 
-          <textarea
-            name="message"
-            placeholder="Message"
-            value={formData.message}
-            onChange={handleChange}
-            rows="4"
-            className="w-full p-3 rounded bg-black text-white"
-          />
+          <h3 className="text-xl text-gold mb-4 tracking-wide">
+            Nationwide Booking Desk
+          </h3>
 
-          <button
-            type="submit"
-            className="w-full bg-gold py-3 rounded text-black font-semibold hover:opacity-90 transition"
-          >
-            Submit
-          </button>
-        </form>
+          <p className="text-sm opacity-70 mb-8">
+            Speak directly with our team for availability,
+            pricing, and private arrangements.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+            {/* WhatsApp */}
+            <a
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                defaultMessage
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 px-8 py-3
+                         bg-green-500 text-white rounded-full font-semibold
+                         hover:scale-105 transition"
+              aria-label="WhatsApp Elite Event Service"
+            >
+              <FaWhatsapp size={20} />
+              Chat on WhatsApp
+            </a>
+
+            {/* Call */}
+            <a
+              href={`tel:+${phoneNumber}`}
+              className="flex items-center justify-center gap-3 px-8 py-3
+                         bg-gold text-black rounded-full font-semibold
+                         hover:scale-105 transition"
+              aria-label="Call Elite Event Service"
+            >
+              <FaPhoneAlt size={18} />
+              Call Now
+            </a>
+
+          </div>
+        </div>
+
+        {/* Footer note */}
+        <p className="text-xs opacity-60 text-center mt-10">
+          Available Across India • 18+ Service • By Appointment Only
+        </p>
+
       </div>
     </section>
   );

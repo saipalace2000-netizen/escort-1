@@ -1171,32 +1171,6 @@ export default function Home() {
 
         </div>
       </section>
-
-      {/* ========================= */}
-      {/* STICKY MOBILE CTA */}
-      {/* ========================= */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-t border-gold/20 md:hidden">
-        <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3 gap-3">
-
-          <p className="text-xs text-gray-200 leading-tight">
-            <span className="text-gold font-semibold">Available Now</span><br />
-            Discreet · Verified · 18+
-          </p>
-
-          <a
-            href={CONTACT.whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-3 bg-gold text-bg rounded-lg text-sm font-semibold hover:opacity-90 transition whitespace-nowrap"
-          >
-            WhatsApp Now
-          </a>
-
-
-        </div>
-      </div>
-
-
     </>
   );
 }
