@@ -4,52 +4,67 @@ import {
   FaWhatsapp,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { CONTACT } from "../config/contact";
 
 export default function ContactIcons() {
+  const iconClass =
+    "w-12 h-12 flex items-center justify-center rounded-full bg-card text-gold hover:scale-110 hover:shadow-lg transition duration-300";
+
   return (
     <div className="flex gap-6 justify-center mt-8">
       {/* Instagram */}
-      <a
-        href="https://www.instagram.com/yourusername"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-12 h-12 flex items-center justify-center rounded-full bg-card text-gold hover:scale-110 transition"
-        aria-label="Instagram"
-      >
-        <FaInstagram size={22} />
-      </a>
+      {CONTACT.instagram && (
+        <a
+          href={CONTACT.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          aria-label="Instagram"
+          title="Instagram"
+        >
+          <FaInstagram size={22} />
+        </a>
+      )}
 
       {/* Facebook */}
-      <a
-        href="https://www.facebook.com/yourusername"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-12 h-12 flex items-center justify-center rounded-full bg-card text-gold hover:scale-110 transition"
-        aria-label="Facebook"
-      >
-        <FaFacebookF size={22} />
-      </a>
+      {CONTACT.facebook && (
+        <a
+          href={CONTACT.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          aria-label="Facebook"
+          title="Facebook"
+        >
+          <FaFacebookF size={22} />
+        </a>
+      )}
 
       {/* WhatsApp */}
-      <a
-        href="https://wa.me/917410123559"
-
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-12 h-12 flex items-center justify-center rounded-full bg-card text-gold hover:scale-110 transition"
-        aria-label="WhatsApp"
-      >
-        <FaWhatsapp size={22} />
-      </a>
+      {CONTACT.whatsappNumber && (
+        <a
+          href={CONTACT.whatsappMessageLink || CONTACT.whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          aria-label="WhatsApp"
+          title="WhatsApp"
+        >
+          <FaWhatsapp size={22} />
+        </a>
+      )}
 
       {/* Phone Call */}
-      <a
-        href="tel:+917410123559"
-        className="w-12 h-12 flex items-center justify-center rounded-full bg-card text-gold hover:scale-110 transition"
-        aria-label="Call"
-      >
-        <FaPhoneAlt size={20} />
-      </a>
+      {CONTACT.phoneNumber && (
+        <a
+          href={CONTACT.telLink}
+          className={iconClass}
+          aria-label="Call"
+          title="Call"
+        >
+          <FaPhoneAlt size={20} />
+        </a>
+      )}
     </div>
   );
 }
