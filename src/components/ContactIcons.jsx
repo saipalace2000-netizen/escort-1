@@ -32,7 +32,7 @@ export default function ContactIcons() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/917977209085"
+        href="https://wa.me/917410123559"
 
         target="_blank"
         rel="noopener noreferrer"
@@ -44,7 +44,7 @@ export default function ContactIcons() {
 
       {/* Phone Call */}
       <a
-        href="tel:+917977209085"
+        href="tel:+917410123559"
         className="w-12 h-12 flex items-center justify-center rounded-full bg-card text-gold hover:scale-110 transition"
         aria-label="Call"
       >

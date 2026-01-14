@@ -21,10 +21,172 @@ const scrollFadeUp = {
   },
 };
 
+/* ========================= */
+/* NEW: TRUST SERVICE DATA   */
+/* ========================= */
+const trustServices = [
+  {
+    title: "Home Service",
+    desc:
+      "Private home-based companionship arranged with complete discretion. Ideal for clients who prefer comfort, familiarity, and a relaxed environment.",
+  },
+  {
+    title: "Hotel Service",
+    desc:
+      "Premium hotel-based companionship for business stays, travel plans, and five-star experiences with professional etiquette.",
+  },
+  {
+    title: "Hand-to-Hand Payment",
+    desc:
+      "Transparent and respectful hand-to-hand payment option discussed privately to maintain trust, clarity, and confidentiality.",
+  },
+  {
+    title: "Joonon (On-Call) Service",
+    desc:
+      "On-call companion availability for spontaneous plans, private events, and last-minute social arrangements, subject to availability.",
+  },
+];
 
 export default function Home() {
   return (
     <>
+      {/* ========================= */}
+      {/* FAQ SCHEMA (SEO) */}
+      {/* ========================= */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are all profiles on Elite Event Service verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every profile listed on Elite Event Service goes through a verification process to ensure authenticity, professionalism, and eligibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is client privacy maintained?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Client privacy is treated with the highest priority. All personal information remains confidential."
+      }
+    }
+  ]
+}
+        `,
+        }}
+      />
+
+      {/* ========================= */}
+      {/* HERO SECTION */}
+      {/* ========================= */}
+      <section className="pt-24 pb-20 md:pt-32 md:pb-24 flex flex-col items-center text-center px-4 md:px-6 bg-bg">
+        <motion.img
+          src={logo}
+          alt="Elite Event Service"
+          className="h-20 md:h-28 mb-6 md:mb-8 opacity-95"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        />
+
+        <motion.h1
+          className="text-gold text-3xl md:text-6xl font-heading mb-6"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
+          Premium Companionship for
+          <br />
+          <span className="text-gold/90">Private & Exclusive Occasions</span>
+        </motion.h1>
+
+        <motion.p
+          className="max-w-2xl text-gray-200 mb-10"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
+          Discreet, verified, and professionally curated experiences designed
+          for individuals who value privacy and quality interaction.
+        </motion.p>
+
+        <div className="flex gap-4">
+          <Link to="/profiles" className="px-10 py-3 bg-gold text-bg rounded-lg">
+            View Verified Profiles
+          </Link>
+          <Link to="/contact" className="px-10 py-3 border border-gold text-gold rounded-lg">
+            Make a Private Inquiry
+          </Link>
+        </div>
+      </section>
+
+      {/* ========================= */}
+      {/* NEW: TRUST SERVICES */}
+      {/* ========================= */}
+      <section className="py-28 px-6 bg-black/30">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-gold text-3xl md:text-4xl font-heading mb-14">
+            Trusted & Flexible Service Options
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-10 text-left">
+            {trustServices.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="bg-card p-10 rounded-2xl border border-gold/20"
+              >
+                <h3 className="text-gold text-xl font-semibold mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  {service.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================= */}
+      {/* NEW: CLIENT PRIVACY */}
+      {/* ========================= */}
+      <section className="py-28 px-6 bg-bg">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-gold text-3xl md:text-4xl font-heading mb-10">
+            Client Privacy & Confidentiality
+          </h2>
+
+          <div className="space-y-6 text-gray-300 text-sm max-w-4xl mx-auto">
+            <p>
+              Elite Event Service follows a strict privacy-first approach.
+              All interactions remain confidential from inquiry to completion.
+            </p>
+            <p>
+              Payment discussions, service preferences, and communication
+              details are handled discreetly and never disclosed to third parties.
+            </p>
+            <p>
+              The platform is intended strictly for adults aged 18+ and
+              operates within lawful, ethical, and consensual boundaries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+
+
       {/* ========================= */}
       {/* FAQ SCHEMA (SEO) */}
       {/* ========================= */}
@@ -1174,3 +1336,5 @@ export default function Home() {
     </>
   );
 }
+
+

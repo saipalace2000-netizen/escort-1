@@ -1,6 +1,6 @@
 export const CONTACT = {
-  phone: "7977209085",
-  whatsapp: "7977209085",
-  whatsappLink: "https://wa.me/7977209085",
-  telLink: "tel:7977209085",
+  phone: "917410123559",
+  whatsapp: "917410123559",
+  whatsappLink: "https://wa.me/7410123559",
+  telLink: "tel:7410123559",
 };

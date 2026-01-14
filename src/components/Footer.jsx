@@ -26,14 +26,39 @@ export default function Footer() {
             Available for selective engagements and premium experiences only.
           </p>
 
-          <p className="text-gold text-sm tracking-wide uppercase mb-6">
+          <p className="text-gold text-sm tracking-wide uppercase mb-2">
             By Appointment Only
           </p>
 
-          <p className="text-sm opacity-70 mb-8">
+          {/* All India Service */}
+          <p className="text-sm opacity-80 mb-8">
             Available Across India
           </p>
 
+          {/* Major Cities */}
+          <div className="max-w-4xl mx-auto mb-10">
+            <h3 className="text-gold text-sm uppercase tracking-wide mb-4">
+              Major Cities We Serve
+            </h3>
+
+            <p className="text-sm opacity-70 leading-relaxed">
+              Mumbai · Pune · Bangalore · Ahmedabad · Jaipur · Surat · Delhi ·
+              Kolkata · Nagpur · Goa · Bhopal · Indore · Diu &amp; Daman
+            </p>
+          </div>
+
+          {/* Pune Sub Locations */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <h3 className="text-gold text-sm uppercase tracking-wide mb-4">
+              Pune Service Areas
+            </h3>
+
+            <p className="text-sm opacity-65 leading-relaxed">
+               Kalyani Nagar · Koregaon Park · Viman Nagar · Kharadi · Hinjawadi · Baner · Aundh · Bavdhan ·
+              Hadapsar · Shivaji Nagar · Deccan · Swargate · Camp ·
+              Magarpatta · Pimpri-Chinchwad · Chakan ·
+            </p>
+          </div>
 
           {/* Social Icons */}
           <div className="flex justify-center gap-6">
@@ -60,7 +85,7 @@ export default function Footer() {
               <FaFacebookF size={22} />
             </a>
 
-            {/* WhatsApp (Modal Trigger) */}
+            {/* WhatsApp */}
             <button
               onClick={() => setOpenWhatsApp(true)}
               aria-label="Chat on WhatsApp"
@@ -69,16 +94,14 @@ export default function Footer() {
               <FaWhatsapp size={22} />
             </button>
 
-            {/* Phone (Modal Trigger) */}
+            {/* Phone */}
             <button
               onClick={() => setOpenWhatsApp(true)}
               aria-label="Call Elite Event Service"
-              className="w-12 h-12 flex items-center justify-center rounded-full
-             bg-bg text-gold hover:scale-110 hover:bg-gold hover:text-bg transition"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-bg text-gold hover:scale-110 hover:bg-gold hover:text-bg transition"
             >
               <FaPhoneAlt size={20} />
             </button>
-
 
           </div>
 

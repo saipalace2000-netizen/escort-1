@@ -26,9 +26,9 @@ export default function FloatingWhatsApp() {
         isOpen={openWhatsApp}
         onClose={() => setOpenWhatsApp(false)}
         contacts={[
-          { city: "Mumbai", number: "917977209085" },
-          { city: "Delhi", number: "917066098382" },
-          { city: "Pune", number: "9122999546" },
+          { city: "Mumbai", number: "917410123559" },
+          { city: "Delhi", number: "917410123559" },
+          { city: "Pune", number: "917410123559" },
         ]}
       />
     </>
