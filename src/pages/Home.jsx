@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { motion } from "framer-motion";
-import { CONTACT } from "../config/contact";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -21,31 +21,7 @@ const scrollFadeUp = {
   },
 };
 
-/* ========================= */
-/* NEW: TRUST SERVICE DATA   */
-/* ========================= */
-const trustServices = [
-  {
-    title: "Home Service",
-    desc:
-      "Private home-based companionship arranged with complete discretion. Ideal for clients who prefer comfort, familiarity, and a relaxed environment.",
-  },
-  {
-    title: "Hotel Service",
-    desc:
-      "Premium hotel-based companionship for business stays, travel plans, and five-star experiences with professional etiquette.",
-  },
-  {
-    title: "Hand-to-Hand Payment",
-    desc:
-      "Transparent and respectful hand-to-hand payment option discussed privately to maintain trust, clarity, and confidentiality.",
-  },
-  {
-    title: "Joonon (On-Call) Service",
-    desc:
-      "On-call companion availability for spontaneous plans, private events, and last-minute social arrangements, subject to availability.",
-  },
-];
+
 
 export default function Home() {
   return (
@@ -82,71 +58,6 @@ export default function Home() {
         `,
         }}
       />
-
-      
-
-      {/* ========================= */}
-      {/* NEW: TRUST SERVICES */}
-      {/* ========================= */}
-      <section className="py-28 px-6 bg-black/30">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-gold text-3xl md:text-4xl font-heading mb-14">
-            Trusted & Flexible Service Options
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-10 text-left">
-            {trustServices.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="bg-card p-10 rounded-2xl border border-gold/20"
-              >
-                <h3 className="text-gold text-xl font-semibold mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  {service.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================= */}
-      {/* NEW: CLIENT PRIVACY */}
-      {/* ========================= */}
-      <section className="py-28 px-6 bg-bg">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-gold text-3xl md:text-4xl font-heading mb-10">
-            Client Privacy & Confidentiality
-          </h2>
-
-          <div className="space-y-6 text-gray-300 text-sm max-w-4xl mx-auto">
-            <p>
-              Elite Event Service follows a strict privacy-first approach.
-              All interactions remain confidential from inquiry to completion.
-            </p>
-            <p>
-              Payment discussions, service preferences, and communication
-              details are handled discreetly and never disclosed to third parties.
-            </p>
-            <p>
-              The platform is intended strictly for adults aged 18+ and
-              operates within lawful, ethical, and consensual boundaries.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      
-
-
-    
-
       {/* ========================= */}
       {/* HERO SECTION */}
       {/* ========================= */}
@@ -245,6 +156,99 @@ export default function Home() {
           and conducted with complete discretion.
         </p>
       </section>
+      {/* ========================= */}
+      {/* NEW: TRUST SERVICES */}
+      {/* ========================= */}
+      <section className="py-28 px-6 bg-black/30">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-gold text-3xl md:text-4xl font-heading mb-14">
+            Trusted & Flexible Service Options
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-10 text-left">
+            {trustServices.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="bg-card p-10 rounded-2xl border border-gold/20"
+              >
+                <h3 className="text-gold text-xl font-semibold mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  {service.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      
+
+      
+      {/* ========================= */}
+      {/* NEW: CLIENT PRIVACY */}
+      {/* ========================= */}
+      <section className="py-28 px-6 bg-bg">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-gold text-3xl md:text-4xl font-heading mb-10">
+            Client Privacy & Confidentiality
+          </h2>
+
+          <div className="space-y-6 text-gray-300 text-sm max-w-4xl mx-auto">
+            <p>
+              Elite Event Service follows a strict privacy-first approach.
+              All interactions remain confidential from inquiry to completion.
+            </p>
+            <p>
+              Payment discussions, service preferences, and communication
+              details are handled discreetly and never disclosed to third parties.
+            </p>
+            <p>
+              The platform is intended strictly for adults aged 18+ and
+              operates within lawful, ethical, and consensual boundaries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+/* ========================= */
+/* NEW: TRUST SERVICE DATA   */
+/* ========================= */
+const trustServices = [
+  {
+    title: "Home Service",
+    desc:
+      "Private home-based companionship arranged with complete discretion. Ideal for clients who prefer comfort, familiarity, and a relaxed environment.",
+  },
+  {
+    title: "Hotel Service",
+    desc:
+      "Premium hotel-based companionship for business stays, travel plans, and five-star experiences with professional etiquette.",
+  },
+  {
+    title: "Hand-to-Hand Payment",
+    desc:
+      "Transparent and respectful hand-to-hand payment option discussed privately to maintain trust, clarity, and confidentiality.",
+  },
+  {
+    title: "Joonon (On-Call) Service",
+    desc:
+      "On-call companion availability for spontaneous plans, private events, and last-minute social arrangements, subject to availability.",
+  },
+];
+      
+
+
+    
+
+      
 
       {/* ========================= */}
       {/* CORE SERVICE POINTS */}
