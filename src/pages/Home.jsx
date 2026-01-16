@@ -83,49 +83,7 @@ export default function Home() {
         }}
       />
 
-      {/* ========================= */}
-      {/* HERO SECTION */}
-      {/* ========================= */}
-      <section className="pt-24 pb-20 md:pt-32 md:pb-24 flex flex-col items-center text-center px-4 md:px-6 bg-bg">
-        <motion.img
-          src={logo}
-          alt="Elite Event Service"
-          className="h-20 md:h-28 mb-6 md:mb-8 opacity-95"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-        />
-
-        <motion.h1
-          className="text-gold text-3xl md:text-6xl font-heading mb-6"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-        >
-          Premium Companionship for
-          <br />
-          <span className="text-gold/90">Private & Exclusive Occasions</span>
-        </motion.h1>
-
-        <motion.p
-          className="max-w-2xl text-gray-200 mb-10"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-        >
-          Discreet, verified, and professionally curated experiences designed
-          for individuals who value privacy and quality interaction.
-        </motion.p>
-
-        <div className="flex gap-4">
-          <Link to="/profiles" className="px-10 py-3 bg-gold text-bg rounded-lg">
-            View Verified Profiles
-          </Link>
-          <Link to="/contact" className="px-10 py-3 border border-gold text-gold rounded-lg">
-            Make a Private Inquiry
-          </Link>
-        </div>
-      </section>
+      
 
       {/* ========================= */}
       {/* NEW: TRUST SERVICES */}
@@ -187,62 +145,7 @@ export default function Home() {
       
 
 
-      {/* ========================= */}
-      {/* FAQ SCHEMA (SEO) */}
-      {/* ========================= */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Are all profiles on Elite Event Service verified?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every profile listed on Elite Event Service goes through a verification process to ensure authenticity, professionalism, and eligibility. This helps maintain a safe and reliable experience for clients."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is client privacy and confidentiality maintained?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Client privacy is treated with the highest priority. All personal information shared during inquiries or bookings remains confidential and is never disclosed to third parties."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What type of services does Elite Event Service offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Elite Event Service offers premium social companionship for private gatherings, events, celebrations, and social occasions. All interactions are professional, discreet, and consensual."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Elite Event Service intended for adults only?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Elite Event Service is strictly intended for adults aged 18 and above. All engagements follow clear consent, mutual respect, and lawful guidelines."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is booking handled?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bookings are handled privately through secure communication channels. Clear discussion of availability, expectations, and arrangements ensures transparency and comfort for both parties."
-      }
-    }
-  ]
-}
-    `,
-        }}
-      />
+    
 
       {/* ========================= */}
       {/* HERO SECTION */}
