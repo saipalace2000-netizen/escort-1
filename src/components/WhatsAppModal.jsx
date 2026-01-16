@@ -4,7 +4,7 @@ export default function WhatsAppModal({
   isOpen,
   onClose,
   contacts = [],
-  brandName = "Elite Escort Event",
+  brandName = "Elite Event Service",
   defaultMessage = "Hello ✨ I want to book an event.",
 }) {
   if (!isOpen) return null;

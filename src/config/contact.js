@@ -1,7 +1,7 @@
 // src/config/contact.js
 
 export const CONTACT = {
-  brandName: "Elite Escort Event", // or "Elite Event Services"
+  brandName: "Elite Event SERVICE", // or "Elite Event Services"
 
   // ✅ Main Numbers (WITH country code)
   phoneNumber: "917410123559",
